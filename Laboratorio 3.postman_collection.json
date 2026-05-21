@@ -1,0 +1,168 @@
+{
+  "info": {
+    "_postman_id": "51fbfd3f-f2d1-4edb-8a6b-8542d7f30e49",
+    "name": "Laboratorio 3",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "51643913",
+    "_collection_link": "https://go.postman.co/collection/51643913-51fbfd3f-f2d1-4edb-8a6b-8542d7f30e49?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Get All",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{_url}}/api/specimen/getAll",
+          "host": [
+            "{{_url}}"
+          ],
+          "path": [
+            "api",
+            "specimen",
+            "getAll"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All with params",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{_url}}/api/specimen/getAll?page=0&size=2&sortBy=dangerLevel&sortOrder=desc",
+          "host": [
+            "{{_url}}"
+          ],
+          "path": [
+            "api",
+            "specimen",
+            "getAll"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "0",
+              "type": "text"
+            },
+            {
+              "key": "size",
+              "value": "2",
+              "type": "text"
+            },
+            {
+              "key": "sortBy",
+              "value": "dangerLevel",
+              "type": "text"
+            },
+            {
+              "key": "sortOrder",
+              "value": "desc",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get By ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{_url}}/api/specimen/getBy/2c1da540-16f7-4d8e-bda5-a62b61c87d29",
+          "host": [
+            "{{_url}}"
+          ],
+          "path": [
+            "api",
+            "specimen",
+            "getBy",
+            "2c1da540-16f7-4d8e-bda5-a62b61c87d29"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"Ganon\",\r\n    \"region\": \"Hell\",\r\n    \"dangerLevel\": 99,\r\n    \"isFriendly\": false\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{_url}}/api/specimen/create",
+          "host": [
+            "{{_url}}"
+          ],
+          "path": [
+            "api",
+            "specimen",
+            "create"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"Gerudo\",\r\n    \"region\": \"Gerudo Valley\",\r\n    \"dangerLevel\": 4,\r\n    \"isFriendly\": true\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{_url}}/api/specimen/update/1c1da540-16f7-4d8e-bda5-a62b61c87d29",
+          "host": [
+            "{{_url}}"
+          ],
+          "path": [
+            "api",
+            "specimen",
+            "update",
+            "1c1da540-16f7-4d8e-bda5-a62b61c87d29"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{_url}}/api/specimen/delete/1c1da540-16f7-4d8e-bda5-a62b61c87d29",
+          "host": [
+            "{{_url}}"
+          ],
+          "path": [
+            "api",
+            "specimen",
+            "delete",
+            "1c1da540-16f7-4d8e-bda5-a62b61c87d29"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
