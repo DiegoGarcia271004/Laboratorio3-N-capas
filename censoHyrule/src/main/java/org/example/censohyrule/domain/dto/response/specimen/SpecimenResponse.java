@@ -1,4 +1,4 @@
-package org.example.censohyrule.domain.dto.response;
+package org.example.censohyrule.domain.dto.response.specimen;
 
 import lombok.*;
 import java.util.UUID;

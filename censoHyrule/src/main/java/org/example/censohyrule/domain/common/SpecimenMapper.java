@@ -2,8 +2,9 @@ package org.example.censohyrule.domain.common;
 
 import org.example.censohyrule.domain.dto.request.CreateSpecimenRequest;
 import org.example.censohyrule.domain.dto.request.UpdateSpecimenRequest;
-import org.example.censohyrule.domain.dto.response.SpecimenResponse;
+import org.example.censohyrule.domain.dto.response.specimen.SpecimenResponse;
 import org.example.censohyrule.domain.entity.Specimen;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Component;
 
 import java.util.UUID;
@@ -40,8 +41,10 @@ public class SpecimenMapper {
                 .build();
     }
 
-    
 
+    public Page<SpecimenResponse> toDtoList(Page<Specimen> specimen) {
+        return specimen.map(this::toDto);
+    }
     // TODO: El estudiante deberá agregar aquí el método para mapear un Page<Specimen> a Page<SpecimenResponse>
     // pista: utilizando .map(this::toDto)
 
