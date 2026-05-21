@@ -1,4 +1,4 @@
-package org.example.censohyrule.domain.common;
+package org.example.censohyrule.common;
 
 import org.example.censohyrule.domain.dto.request.CreateSpecimenRequest;
 import org.example.censohyrule.domain.dto.request.UpdateSpecimenRequest;
@@ -45,7 +45,5 @@ public class SpecimenMapper {
     public Page<SpecimenResponse> toDtoList(Page<Specimen> specimen) {
         return specimen.map(this::toDto);
     }
-    // TODO: El estudiante deberá agregar aquí el método para mapear un Page<Specimen> a Page<SpecimenResponse>
-    // pista: utilizando .map(this::toDto)
 
 }

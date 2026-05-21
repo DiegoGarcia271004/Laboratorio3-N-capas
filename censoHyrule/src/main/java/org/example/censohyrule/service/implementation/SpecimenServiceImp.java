@@ -2,7 +2,7 @@ package org.example.censohyrule.service.implementation;
 
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
-import org.example.censohyrule.domain.common.SpecimenMapper;
+import org.example.censohyrule.common.SpecimenMapper;
 import org.example.censohyrule.domain.dto.request.CreateSpecimenRequest;
 import org.example.censohyrule.domain.dto.request.UpdateSpecimenRequest;
 import org.example.censohyrule.domain.dto.response.PageableResponse;
@@ -54,7 +54,7 @@ public class SpecimenServiceImp implements SpecimenService {
 
     @Override
     public SpecimenResponse getSpecimenById(UUID id) {
-        return specimenMapper.toDto(specimenRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Specimen not found in Hyrule")));
+        return specimenMapper.toDto(specimenRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Specimen not found in Sheikah Slate records")));
     }
 
     @Override
